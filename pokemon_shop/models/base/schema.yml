@@ -1,0 +1,53 @@
+version: 2
+
+models:
+  - name: pokemon_data_cleaned
+    description: cleaned pokemon dataset
+    columns:
+        - name: pokemon_data_id
+          description: id value that maps to a pokemon; not primary key
+          tests:
+            - not_null
+        - name: pokemon_name
+          description: name of the pokemon
+          tests:
+            - not_null
+        - name: type1
+          description: pokemon top level category
+          tests:
+            - not_null
+        - name: type2
+          description: pokemon second level category
+        - name: hit_points
+          description: pokemon strength value
+          tests:
+            - not_null
+        - name: attack
+          description: pokemon attack value
+          tests:
+            - not_null
+        - name: defense
+          description: pokemon defense value
+          tests:
+            - not_null
+        - name: special_attack
+          description: pokemon special attack value
+          tests:
+            - not_null
+        - name: special_defense
+          description: pokemon special defense value
+          tests:
+            - not_null
+        - name: speed 
+          description: pokemon speed value
+          tests:
+            - not_null
+        - name: generation
+          description: pokemon generation value
+          tests:
+            - not_null
+        - name: is_legendary
+          tests:
+            - not_null
+            - accepted_values:
+                values: ['TRUE', 'FALSE']
