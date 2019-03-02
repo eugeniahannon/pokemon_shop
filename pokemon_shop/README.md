@@ -10,5 +10,10 @@
 
 ### notes to self
 
-postgres needs to be running
-the command to run dbt is `dbt run --profiles-dir profile`.
+* postgres needs to be running
+* project names need to match in dbt_project.yml
+* seed the csv data into dbt `dbt seed --profiles-dir profile`
+* open the csv in postico and get SQL straight for dbt transformation 
+* make dbt base model
+* the command to run dbt is `dbt run --profiles-dir profile`
+* to look at dbt docs `dbt docs generate --profiles-dir profile` then `dbt docs serve --profiles-dir profile` (to quit the webserver ctrl+c)
